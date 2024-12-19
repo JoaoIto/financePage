@@ -9,22 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
     "@hookform/resolvers": "^3.9.1",
+    "@mui/material": "^6.2.1",
+    "@radix-ui/react-label": "^2.1.1",
     "@radix-ui/react-popover": "^1.1.2",
     "@radix-ui/themes": "^3.1.4",
     "bcryptjs": "^2.4.3",
     "class-variance-authority": "^0.7.0",
-    "tailwind-merge": "^2.5.4",
-    "@emotion/react": "^11.14.0",
-    "@emotion/styled": "^11.14.0",
-    "@mui/material": "^6.2.1",
     "framer-motion": "^11.11.11",
     "lucide-react": "^0.468.0",
     "motion": "^11.15.0",
     "next": "15.1.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "recharts": "^2.15.0"
+    "recharts": "^2.15.0",
+    "tailwind-merge": "^2.5.4"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
