@@ -238,7 +238,7 @@ export default function UpdatedFinanceProLanding() {
                   </RechartsePieChart>
                 </CardContent>
               </Card>
-              <Card>
+              <Card className="text-black">
                 <CardHeader>
                   <CardTitle>Tabela de Transações</CardTitle>
                 </CardHeader>
