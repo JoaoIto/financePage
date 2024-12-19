@@ -71,13 +71,6 @@ export default function FinanceProLanding() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5 }}
             >
-              <Button
-                  variant="outline"
-                  className="bg-blue-600 text-white hover:bg-blue-700"
-                  onClick={() => window.location.href = 'https://finance-app-tau-flax.vercel.app/auth/login'}
-              >
-                Login
-              </Button>
             </motion.div>
           </nav>
         </header>
@@ -98,7 +91,7 @@ export default function FinanceProLanding() {
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition duration-300"
                 onClick={() => window.location.href = 'https://finance-app-tau-flax.vercel.app/'}
             >
-              Comece sua Jornada Financeira <ArrowRight className="ml-2" />
+              Comece sua Jornada <ArrowRight className="ml-2" />
             </Button>
           </motion.div>
 
