@@ -11,22 +11,37 @@ import { BarChart, PieChart as RechartsePieChart, Bar, Cell, XAxis, YAxis, Toolt
 import {FeatureCard} from "@/app/components/ui/molecules/FeatureCard";
 import {Title} from "@/app/components/ui/molecules/Title";
 
-export default function UpdatedFinanceProLanding() {
-  const [transactions, setTransactions] = useState([]);
+interface Transaction {
+  id: number;
+  type: 'income' | 'expense';
+  amount: number;
+  date: string;
+}
+
+export default function FinanceProLanding() {
+  const [transactions, setTransactions] = useState<Transaction[]>([]);
   const [income, setIncome] = useState('');
   const [expense, setExpense] = useState('');
 
-  const addTransaction = (type, amount) => {
-    if (amount && !isNaN(amount)) {
+  const addTransaction = (
+      type: 'income' | 'expense',
+      amount: number | string
+  ) => {
+    if (amount && !isNaN(Number(amount))) {
       const newTransaction = {
         id: Date.now(),
         type,
-        amount: parseFloat(amount),
-        date: new Date().toLocaleDateString()
+        amount: parseFloat(String(amount)),
+        date: new Date().toLocaleDateString(),
       };
-      setTransactions([...transactions, newTransaction]);
-      if (type === 'income') setIncome('');
-      else setExpense('');
+
+      setTransactions((prevTransactions) => [...prevTransactions, newTransaction]);
+
+      if (type === 'income') {
+        setIncome('');
+      } else {
+        setExpense('');
+      }
     }
   };
 
