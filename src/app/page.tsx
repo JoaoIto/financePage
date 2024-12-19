@@ -9,6 +9,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/app/components/ui/at
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/app/components/ui/atoms/table';
 import { BarChart, PieChart as RechartsePieChart, Bar, Cell, XAxis, YAxis, Tooltip, Legend, Pie } from 'recharts';
 import {FeatureCard} from "@/app/components/ui/molecules/FeatureCard";
+import {Title} from "@/app/components/ui/molecules/Title";
 
 export default function UpdatedFinanceProLanding() {
   const [transactions, setTransactions] = useState([]);
@@ -48,7 +49,7 @@ export default function UpdatedFinanceProLanding() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5 }}
             >
-              <h1 className="text-3xl font-bold text-blue-600">FinancePro</h1>
+              <Title />
             </motion.div>
             <motion.div
                 initial={{ opacity: 0, x: 20 }}
