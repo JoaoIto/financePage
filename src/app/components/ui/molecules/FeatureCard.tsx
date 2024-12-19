@@ -1,7 +1,13 @@
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 import React from "react";
 
-export function FeatureCard({ icon, title, description }) {
+export interface FeatureCardProps {
+    icon: React.ReactNode; // Icon can be any React component
+    title: string;         // Title as a string
+    description: string;   // Description as a string
+}
+
+export function FeatureCard({ icon, title, description }: FeatureCardProps) {
     return (
         <motion.div
             whileHover={{ scale: 1.05 }}
